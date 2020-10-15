@@ -10,7 +10,7 @@ sudo apt update
 clear
 sudo apt upgrade -y
 clear
-git pull https://github.com/Nolanrulesroblox/Git-update-test.git
+git pull https://github.com/Nolanrulesroblox/SU-v2.git
 clear
 sudo rm readme.md
 echo "temp files cleared"
