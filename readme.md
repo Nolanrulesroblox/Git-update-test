@@ -9,4 +9,4 @@ note 1: if you plan to use this on your repo, YOU MUST change the Wget ZIP FILE 
 note 2: Do not edit update.sh BESIDES the WGET link. only edit upgrade.sh
 ``` 
 
-Zip instead of git
+Zip instead of git and no sleep

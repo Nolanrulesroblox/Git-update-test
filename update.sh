@@ -4,7 +4,7 @@ clear
 echo "Notice: All files besides 'update.sh' in this folder are DELETED. FOREVER. "
 echo "Ctrl + C to cancel."
 sudo rm log,txt
-sleep 5
+sleep 2
 echo 'no cancel YES' >> log,txt
 sudo rm readme.md
 #sudo rm upgrade.sh <-- ignore.
@@ -30,7 +30,6 @@ wget https://github.com/Nolanrulesroblox/SU-v2/blob/zip-mode/zip.zip?raw=true
 sudo mv zip.zip?raw=true zip.zip
 echo "installing/updating download - OK"
 echo 'wget download zip 1 - OK' >> log,txt
-sleep 1
 echo "updating and making folders"
 sudo mkdir zip
 sudo chmod 777 zip
@@ -38,7 +37,6 @@ echo "chmod 777 - OK"
 echo "mkdir zip - OK"
 echo 'chmod 777 1 YES' >> log,txt
 echo 'mkdir zip 1 YES' >> log,txt
-sleep 1
 clear
 cp zip.zip zip
 sudo rm zip.zip
@@ -48,7 +46,6 @@ unzip zip.zip
 sudo rm zip.zip
 clear
 echo "updated"
-sleep 3
 clear
 sudo sh upgrade.sh
 cd ..
