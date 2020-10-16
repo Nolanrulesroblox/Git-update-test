@@ -19,6 +19,9 @@ clear
 echo "installing/updating git and git repo"
 git pull https://github.com/Nolanrulesroblox/SU-v2.git
 clear
+sleep 5
+echo hi
+sleep 5
 sudo rm readme.md
 echo "temp files cleared"
 # put your git link above
