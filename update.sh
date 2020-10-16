@@ -1,15 +1,22 @@
 #!/bin/bash
 sudo
 clear
+echo "Notice: All files besides 'update.sh' in this folder are DELETED. FOREVER. "
+echo "Ctrl + C to cancel."
+sleep 3
 echo "installing/updating git and git repo"
-sudo apt update
+sudo apt -qq update
 clear
-sudo apt install git -y
+echo "installing/updating git and git repo"
+sudo apt -qq install git -y
 clear
-sudo apt update
+echo "installing/updating git and git repo"
+sudo apt -qq update
 clear
-sudo apt upgrade -y
+echo "installing/updating git and git repo"
+sudo apt -qq upgrade -y
 clear
+echo "installing/updating git and git repo"
 git pull https://github.com/Nolanrulesroblox/SU-v2.git
 clear
 sudo rm readme.md
@@ -19,7 +26,7 @@ clear
 echo "updated"
 sleep 3
 clear
-echo "running script"
+echo "running update.sh script"
 sleep 3
 echo "10 seconds before auto system-upgrades press CTRL + C to stop"
 sleep 1
@@ -42,19 +49,20 @@ sleep 1
 echo "#########"
 sleep 1
 echo "##########"
-sudo apt update
+# add update commands below, make sure to add SUDO *command* -qq (break) clear
+sudo apt -qq update
 clear
-sudo apt upgrade -y
+sudo apt -qq upgrade -y
 clear
-sudo apt autoremove
+sudo apt -qq autoremove
 clear
-sudo apt autoremove --purge
+sudo apt -qq autoremove --purge
 clear
-sudo apt update 
+sudo apt -qq update 
 clear
-sudo apt-get install update -y
+sudo apt-get -qq install update -y
 clear
-sudo apt-get upgrade -y
+sudo apt-get -qq upgrade -y
 clear
 echo "Done"
 exit
