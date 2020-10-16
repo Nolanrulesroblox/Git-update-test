@@ -8,3 +8,5 @@
 note 1: if you plan to use this on your repo, YOU MUST change the git clone link.
 note 2: Do not edit update.sh BESIDES the clone link. only edit upgrade.sh
 ``` 
+
+git with no sleep

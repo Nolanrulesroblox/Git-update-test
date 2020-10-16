@@ -4,7 +4,7 @@ clear
 echo "Notice: All files besides 'update.sh' in this folder are DELETED. FOREVER. "
 echo "Ctrl + C to cancel."
 sudo rm log,txt
-sleep 5
+sleep 2
 echo 'no cancel YES' >> log,txt
 sudo rm readme.md
 sudo rm upgrade.sh
@@ -29,18 +29,15 @@ echo "installing/updating upgrade - OK"
 git clone https://github.com/Nolanrulesroblox/SU-v2.git
 echo "installing/updating repo - OK"
 echo 'git clone repo 1' >> log,txt
-sleep 1
 sudo chmod 777 SU-v2
 echo "chmod 777 - OK"
 echo 'chmod 777 1 YES' >> log,txt
-sleep 1
 clear
 cd SU-v2
 clear
 # put your git link above
 clear
 echo "updated"
-sleep 3
 clear
 sudo sh upgrade.sh
 cd ..
