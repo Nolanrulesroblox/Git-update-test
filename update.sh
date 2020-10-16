@@ -7,17 +7,15 @@ sudo rm log,txt
 sleep 5
 echo 'no cancel YES' >> log,txt
 sudo rm readme.md
-sudo rm upgrade.sh
+#sudo rm upgrade.sh <-- ignore.
+sudo rm -rf zip
 clear
 echo "installing/updating - apt"
 sudo apt -qq update
 echo 'apt update 1 YES' >> log,txt
 clear
-echo "installing/updating apt - OK"
-sudo apt -qq install git -y
-echo 'apt install git YES' >> log,txt
-clear
-echo "installing/updating git - OK"
+echo "installing Zip and UnZip"
+sudo apt install zip unzip wget -y 
 sudo apt -qq update
 echo 'apt update 2 YES' >> log,txt
 clear
@@ -26,26 +24,36 @@ sudo apt -qq upgrade -y
 echo 'apt upgrade YES' >> log,txt
 clear
 echo "installing/updating upgrade - OK"
-git clone https://github.com/Nolanrulesroblox/SU-v2.git
-echo "installing/updating repo - OK"
-echo 'git clone repo 1' >> log,txt
+# ONLY CHANGE THIS LINK!
+wget https://github.com/Nolanrulesroblox/SU-v2/blob/zip-mode/zip.zip?raw=true
+# ONLY.
+sudo mv zip.zip?raw=true zip.zip
+echo "installing/updating download - OK"
+echo 'wget download zip 1 - OK' >> log,txt
 sleep 1
-sudo chmod 777 SU-v2
+echo "updating and making folders"
+sudo mkdir zip
+sudo chmod 777 zip
 echo "chmod 777 - OK"
+echo "mkdir zip - OK"
 echo 'chmod 777 1 YES' >> log,txt
+echo 'mkdir zip 1 YES' >> log,txt
 sleep 1
 clear
-cd SU-v2
+cp zip.zip zip
+sudo rm zip.zip
+cd zip
 clear
-# put your git link above
+unzip zip.zip
+sudo rm zip.zip
 clear
 echo "updated"
 sleep 3
 clear
 sudo sh upgrade.sh
 cd ..
-sudo chmod 777 SU-v2
-sudo rm -rf SU-v2
+sudo chmod 777 zip
+sudo rm -rf zip
 clear
 echo "temp files cleared."
 echo "Upgraded/Updated - OK"
