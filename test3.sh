@@ -35,7 +35,7 @@ else
 fi
 #call git
 echo "(Exit status was $exitstatus)"
-if (whiptail --title "Git download and run" --yesno "Download and run update file? Y/N" 7 64); then
+if (whiptail --title "Git download and run" --yesno "Download and run update file? Y/N (CAN BE Dangerous!)" 7 64); then
     #yes
     clear
     git clone https://github.com/Nolanrulesroblox/SU-v2.git
@@ -51,13 +51,26 @@ if (whiptail --title "Git download and run" --yesno "Download and run update fil
     echo "updated"
     sleep 3
     clear
+    # this is your run file
     sudo sh upgrade.sh
+    # this is your run file
     cd ..
     sudo chmod 777 SU-v2
     sudo rm -rf SU-v2
     clear
     echo "temp files cleared."
     echo "Upgraded/Updated - OK"
+    if (whiptail --title "reboot?" --yesno "Reboot system?" 7 64); then
+    #yes
+    clear
+    sudo shutdown
+    clear
+    echo "rebooting"
+    sleep 3
+    else
+        #no
+        echo "No shutdown or Reboot."
+    fi
 else
     #no
     clear
