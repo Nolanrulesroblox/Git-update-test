@@ -10,6 +10,8 @@ if (whiptail --title "Check for Updates to script?" --yesno "Check for Updates t
     #yes
     clear
     sudo apt update
+    sudo apt install common-software-properties -y
+    # Do not remove above, just make life easy.
     sudo apt upgrade -y
     echo "updated"
 else
@@ -18,8 +20,19 @@ else
     sudo apt update
     echo "apt update"
 fi
+#remove temp
+if (whiptail --title "Remove temp files??" --yesno "Remove temp files? (Default: Yes)" 7 64); then
+    #yes
+    sudo rm test.sh
+    sudo rm upgrade.sh
+    clear
+    echo "temp removed"
+else
+    #no
+    echo "remove temp skipped"
+fi
 clear
-#ask to install git or zip
+#ask to install git and zip
 echo "(Exit status was $exitstatus)"
 if (whiptail --title "GitZip" --yesno "Install git and zip? Y/N" 7 64); then
     #yes
@@ -60,20 +73,22 @@ if (whiptail --title "Git download and run" --yesno "Download and run update fil
     clear
     echo "temp files cleared."
     echo "Upgraded/Updated - OK"
-    if (whiptail --title "reboot?" --yesno "Reboot system?" 7 64); then
-    #yes
-    clear
-    sudo shutdown
-    clear
-    echo "rebooting"
-    sleep 3
-    else
-        #no
-        echo "No shutdown or Reboot."
-    fi
+        if (whiptail --title "reboot?" --yesno "Reboot system?" 7 64); then
+            #yes
+            clear
+            sudo shutdown
+            clear
+            echo "rebooting"
+            sleep 3
+        else
+            #no
+            echo "No shutdown or Reboot."
+        fi
 else
     #no
     clear
     echo "*SKIPPED*"
 fi
+clear
+echo "Done."
 exit
