@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "enter sudo password for root access (apt,git)"
 sudo
 clear
 echo "Notice: All files besides 'update.sh' in this folder are DELETED. FOREVER. "
