@@ -49,24 +49,31 @@ sleep 3
 sudo apt -qq update
 clear
 echo "Upgrading - do not shutdown or power off."
+echo "progress: ##"
 sudo apt -qq upgrade -y
 clear
 echo "Upgrading - do not shutdown or power off."
+echo "progress: ####"
 sudo apt -qq autoremove
 clear
 echo "Upgrading - do not shutdown or power off."
+echo "progress: ######"
 sudo apt -qq autoremove --purge
 clear
 echo "Upgrading - do not shutdown or power off."
+echo "progress: ########"
 sudo apt -qq update 
 clear
 echo "Upgrading - do not shutdown or power off."
+echo "progress: ##########"
 sudo apt-get -qq install update -y
 clear
 echo "Upgrading - do not shutdown or power off."
+echo "progress: ############"
 sudo apt-get -qq upgrade -y
 clear
 echo "Upgrading - do not shutdown or power off."
+echo "progress: ##############"
 sleep 2
 clear
 echo "Done"
