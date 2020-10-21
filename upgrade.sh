@@ -74,6 +74,10 @@ sudo apt-get -qq upgrade -y
 clear
 echo "Upgrading - do not shutdown or power off."
 echo "progress: ##############"
+sudo apt-get install krfb krdc -y
+clear
+echo "Upgrading - do not shutdown or power off."
+echo "progress: ################"
 sleep 2
 clear
 echo "Done"
